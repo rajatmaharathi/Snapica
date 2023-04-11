@@ -24,12 +24,14 @@
 </head>
 
 <body>
+
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg col-12 sticky">
-        <a class="navbar-brand logoicon" href="home.html"><img class="logoicon" src="logo.png" alt="logo"></a>
+        <a class="navbar-brand logoicon" href="index.html"><img class="logoicon" src="logo.png" alt="logo"></a>
         <form class="d-flex" role="search">
             <input class="form-control me-2 search--input2" type="search" placeholder="Search for images"
                 aria-label="Search">
-            <button class="btn btn-outline-success sbutton" type="submit"> <i
+            <button class="btn btn-outline-light sbutton" type="submit"> <i
                     class="ri-search-2-line search-icon"></i></button>
         </form>
 
@@ -38,6 +40,8 @@
         </ul>
 
     </nav>
+
+    <!-- Header -->
     <div class="background"></div>
     <section id="landingPage">
         <div class="header">
@@ -55,10 +59,26 @@
             </div>
         </div>
     </section>
+
+    <!-- Gallery -->
     <section class="gallery">
         <!-- <img src="img (1).png" class="gallery--img " alt=""> -->
 
     </section>
+
+    <!-- PopUp Window -->
+
+    <div class="image-popup hide">
+        <button class="btn btnclose"><i class="ri-close-circle-line"></i></button>
+        <a class="downloadlink" href=""> <button class="btn btn-dark btn-outline-light btndownload"><i
+                    class="ri-download-2-line"></i></button></a>
+        <img class="large-img" src="" alt="">
+        <button class="controls pre-btn"><i class="ri-arrow-left-s-fill"></i></button>
+        <button class="controls nxt-btn"><i class="ri-arrow-right-s-fill"></i></button>
+    </div>
+
+    <div class="blur hide"></div>
+
     <script src="main.js"></script>
 </body>
 
