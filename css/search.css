@@ -1,0 +1,160 @@
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar2 {
+  padding: 6px 10px 6px 10px;
+  position: fixed;
+  background-color: #2c3333;
+  z-index: 2;
+}
+
+.login {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: white;
+}
+.logoicon {
+  width: 2.5rem;
+}
+
+.search--input2 {
+  margin-left: 7rem;
+  width: 70rem;
+  font-family: "montserrat";
+}
+
+.sbutton {
+  color: aliceblue;
+}
+.sbutton:hover {
+  background-color: white;
+  color: #2c3333;
+}
+.search-icon {
+  font-size: 1.5rem;
+}
+
+.scontainer {
+  margin-top: 3rem;
+  display: grid;
+  margin-inline: 1.5rem;
+  place-items: center;
+}
+
+/* gallery */
+
+.gallery {
+  width: 100%;
+  padding: 90px 20px 20px 20px;
+  background-color: #2c3333;
+  columns: 4;
+  column-gap: 20px;
+}
+.gallery--img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 1rem;
+  background-color: white;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+.gallery--img:hover {
+  transform: scale(1.05);
+}
+
+/* imagepopup */
+
+.blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.image-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 90vh;
+  background: #2c3333;
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  z-index: 100;
+  transition: 0.5sec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btnclose {
+  position: absolute;
+  padding: 0 0 0 10px;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  left: 6px;
+  top: 5px;
+}
+
+.btnclose:hover {
+  color: rgb(95, 95, 95);
+}
+
+.btndownload {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-color: #2c3333;
+}
+.downloadlink {
+  font-family: "montserrat";
+  text-decoration: none;
+  color: white;
+}
+.ri-download-2-line {
+  font-size: 1.5rem;
+}
+.large-img {
+  height: 90%;
+  width: auto;
+  max-width: 80%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.hide {
+  display: none;
+}
+.controls {
+  font-size: 3.6rem;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;
+}
+.pre-btn {
+  left: 1rem;
+}
+.nxt-btn {
+  right: 1rem;
+}
+.controls:hover {
+  font-size: 4rem;
+}

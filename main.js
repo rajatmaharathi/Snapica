@@ -1,6 +1,8 @@
 "use strict";
+let searchParam = location.search.split("=").pop();
 const accessKey = "1c-cDFNiU2GPOJ2zlfYekvpqQVSgZdKrXSykYYbK2f8";
 const randomPhotoUrl = `https://api.unsplash.com/photos/random?client_id=${accessKey}&count=30`;
+const searchPhotoUrl = `https://api.unsplash.com/search/photos?client_id=${accessKey}&query=${searchParam}&per_page=50`;
 const gallery = document.querySelector(".gallery");
 let currentImg = 0;
 let allImages;
@@ -8,7 +10,7 @@ let allImages;
 // navbar
 
 window.addEventListener("scroll", function () {
-  const navbar = document.querySelector(".navbar");
+  const navbar = document.querySelector(".navbar1");
   navbar.classList.toggle("sticky", window.scrollY > 0);
 });
 
@@ -32,6 +34,15 @@ const getImages = function () {
     .then((res) => res.json())
     .then((data) => {
       allImages = data;
+      makeImages(allImages);
+    });
+};
+
+const searchImages = function () {
+  fetch(searchPhotoUrl)
+    .then((res) => res.json())
+    .then((data) => {
+      allImages = data.results;
       makeImages(allImages);
     });
 };
@@ -63,8 +74,11 @@ const showPopup = function (item) {
   image.src = item.urls.regular;
   downloadBtn.href = item.links.html;
 };
-
-getImages();
+if (searchParam) {
+  searchImages();
+} else {
+  getImages();
+}
 
 //close image popup
 
@@ -78,3 +92,17 @@ const closePopup = function () {
 
 closeBtn.addEventListener("click", closePopup);
 overlay.addEventListener("click", closePopup);
+
+// controls
+
+const preBtn = document.querySelector(".pre-btn");
+const nxtBtn = document.querySelector(".nxt-btn");
+
+preBtn.addEventListener("click", function () {
+  if (currentImg > 0) currentImg--;
+  showPopup(allImages[currentImg]);
+});
+nxtBtn.addEventListener("click", function () {
+  if (currentImg < allImages.length - 1) currentImg++;
+  showPopup(allImages[currentImg]);
+});
