@@ -1,2 +1,2 @@
-# [SNAPiCA](rajatmaharathi.github.io/SNAPiCA)
+# [SNAPiCA](rajatmaharathi.github.io/SNAPiCA/)
 Royalty-Free Images Website
