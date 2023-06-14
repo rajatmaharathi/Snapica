@@ -1,4 +1,4 @@
-# [SNAPiCA](https://snapica.netlify.app)
+# [SNAPiCA](rajatmaharathi.github.io/SNAPiCA/)
 Snapica is a website where you can serach for royalty-free images and also download them.
 I used unsplash API to fetch the images.
 
